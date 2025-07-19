@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PouyaHt | Full-Stack & AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    section {
+      max-width: 800px;
+      padding: 2rem;
+    }
+    .card {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .card:hover {
+      background: #333;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>👋 Hi, I'm PouyaHt</h1>
+    <p>🚀 Full-stack Developer & AI Enthusiast</p>
+  </header>
+
+  <section>
+    <div class="card" onclick="toggle('about')">
+      <h2>About Me</h2>
+      <div id="about" class="hidden">
+        <p>🎯 Focus on React, Node.js, and Machine Learning</p>
+        <p>📫 Reach me at: your.email@example.com</p>
+        <p>⚡ Fun fact: I love open source and coffee ☕</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggle('skills')">
+      <h2>Skills</h2>
+      <div id="skills" class="hidden">
+        <ul>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>TensorFlow</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggle('projects')">
+      <h2>Projects</h2>
+      <div id="projects" class="hidden">
+        <p>Project One - Description</p>
+        <p>Project Two - Description</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
